@@ -7,6 +7,12 @@ terraform {
       version = "~> 5.0"
     }
   }
+
+  backend "s3" {
+    bucket = "getrak-tfstate-s3-dev"
+    key    = "devops/iam/terraform.tfstate"
+    region = "us-east-1"
+  }
 }
 
 provider "aws" {
@@ -15,10 +21,9 @@ provider "aws" {
   default_tags {
     tags = merge(
       local.common_tags,
-        {
-            "Provider" = "aws",
-            "Service" = "iam"
-        }
-      )
+      {
+        "Provider" = "aws"
+      }
+    )
   }
 }
