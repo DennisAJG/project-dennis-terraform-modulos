@@ -205,3 +205,5 @@ cython_debug/
 #.idea/
 
 aws-credentials-getrak/*
+
+acessovault.md
