@@ -14,6 +14,8 @@ Criação de 4 usuários IAM, com dois para o time de DevOps e os outros dois pa
 
 #### O primeiro user (dennis-devops-master) será criado via aws-cli com acesso adm total
 
+## IAM 
+
 ###### dennis-devops-master-getrak
 aws iam create-user --user-name dennis-devops-master-getrak -> Criando o usuario
 aws iam attach-user-policy --user-name dennis-devops-master-getrak --policy-arn arn:aws:iam::aws:policy/AdministratorAccess -> atribuindo a politica de administrador ao usuário.
@@ -44,18 +46,32 @@ var.nivel_job_gretak
 vault kv put aws-credentials/iam-access-key-devops/rodrigo-devops-jr-getrak access_key="" secret_key=""
 
 
+###### maycon-dev-master-getrak
+
+
+
 #### OBS:
 Você pode executar o script "acesso-aws-configure.bash" onde ele já deixa por default o access-key e secret-key que está armazenado no vault
 
 
 
+## S3
 
-## Criação da s3 para backend tfstate
+###### Criação da s3 para backend tfstate
 caminho para executar o terraform plan (visualize o arquivo variables para adicionar as informações):
 Terraform/S3/s3-tfstate
 
-## Criação da s3 para Application:
+###### Criação da s3 para Application:
 caminho para executar o terraform plan:
 Terraform/S3/s3-aplications
 s3_bucket_arn = "arn:aws:s3:::applications-s3-dev"
 s3_bucket_name = "applications-s3-dev"
+
+
+
+## ECR
+
+###### Criação da ecr para application:
+Caminho para executar o terraform plan:
+Terraform/ECR/ecr-applications
+ecr_repository_url_applications_getrak = "891612581071.dkr.ecr.us-east-1.amazonaws.com/application-flaskapi-ecr-getrak-dev"
