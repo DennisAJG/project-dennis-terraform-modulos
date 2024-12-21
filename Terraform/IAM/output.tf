@@ -14,3 +14,8 @@ output "iam_user_getrak_devops" {
   description = "Nome do usuário iam para devops"
   value       = aws_iam_user.iam_user_getrak_devops.name
 }
+
+output "iam_group_getrak" {
+  description = "Nome do grupo que será usado"
+  value       = aws_iam_group.iam_group_getrak.name
+}

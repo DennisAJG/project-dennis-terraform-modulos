@@ -23,6 +23,27 @@ vault secrets enable -path=aws-credentials kv -> cria uma secret para aws-creden
 vault kv put aws-credentials/iam-access-key-devops/dennis-devops-master-getrak access_key="" secret_key="" -> armezena a access-key e secret-key do usuário no path
 vault kv get aws-credentials/iam-access-key-devops/dennis-devops-master-getrak -> visualiza a acess-key e secret-key do usuário
 
+
+###### rodrigo-devops-jr-getrak
+no terraform foi adicionado os valores:
+var.iam_user_getrak_devops
+  Nome do usuário iam para devops
+
+  Enter a value: rodrigo
+
+var.job_gretak
+  Nome da profissão o usuário é
+
+  Enter a value: devops
+
+var.nivel_job_gretak
+  Nível da profissão o usuário é
+
+  Enter a value: jr
+
+vault kv put aws-credentials/iam-access-key-devops/rodrigo-devops-jr-getrak access_key="" secret_key=""
+
+
 #### OBS:
 Você pode executar o script "acesso-aws-configure.bash" onde ele já deixa por default o access-key e secret-key que está armazenado no vault
 
