@@ -49,6 +49,13 @@ Você pode executar o script "acesso-aws-configure.bash" onde ele já deixa por 
 
 
 
+
 ## Criação da s3 para backend tfstate
 caminho para executar o terraform plan (visualize o arquivo variables para adicionar as informações):
 Terraform/S3/s3-tfstate
+
+## Criação da s3 para Application:
+caminho para executar o terraform plan:
+Terraform/S3/s3-aplications
+s3_bucket_arn = "arn:aws:s3:::applications-s3-dev"
+s3_bucket_name = "applications-s3-dev"
