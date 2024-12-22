@@ -13,8 +13,3 @@ variable "nivel_job_gretak" {
   type        = string # insira o nível da profissão assim: master, jr, pleno
 }
 
-variable "policy_arn_access_admin_getrak_devs" {
-  description = "ARN da politica de acesso total para o user iam para devs"
-  type        = string # valide no arquivo policys quais são as arns para esse usuario
-}
-
