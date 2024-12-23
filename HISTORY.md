@@ -9,8 +9,8 @@ Criação de 4 usuários IAM, com dois para o time de DevOps e os outros dois pa
 
 
 #### Usuário Dev:
-1 - Maycon-dev-master
-2 - Sara-dev-jr
+1 - Maycon-dev-jr
+2 - Sara-dev-master
 
 #### O primeiro user (dennis-devops-master) será criado via aws-cli com acesso adm total
 
