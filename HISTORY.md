@@ -45,8 +45,11 @@ var.nivel_job_gretak
 
 vault kv put aws-credentials/iam-access-key-devops/rodrigo-devops-jr-getrak access_key="" secret_key=""
 
+terraform output -json | jq '{access_key: .access_key.value, secret_key: .secret_key.value}' > ceredentials-rodrigo-devops-getrak.json
+
 
 ###### maycon-dev-master-getrak
+terraform output -json | jq '{access_key: .access_key.value, secret_key: .secret_key.value}' > credentials-maycon-dev-getrak.json
 
 
 
