@@ -28,3 +28,24 @@ resource "aws_iam_policy" "ecr_push_pull_policy" {
     ]
   })
 }
+
+resource "aws_iam_policy" "s3_applications_read_policy" {
+  name = "S3ReadPolicyApplication"
+  description = "Policy for S3 read to specific bucket Getrak"
+  policy = jsonencode({
+    Version = "2012-10-17",
+    Statement = [
+      {
+        Effect = "Allow",
+        Action = [
+          "s3:GetObject",
+          "s3:ListBucket"
+        ],
+        Resource = [
+          data.terraform_remote_state.arn_s3_applications.outputs.s3_bucket_arn,
+          "${data.terraform_remote_state.arn_s3_applications.outputs.s3_bucket_arn}/*"
+        ]
+      }
+    ]
+  })
+}
