@@ -78,3 +78,15 @@ s3_bucket_name = "applications-s3-dev"
 Caminho para executar o terraform plan:
 Terraform/ECR/ecr-applications
 ecr_repository_url_applications_getrak = "891612581071.dkr.ecr.us-east-1.amazonaws.com/application-flaskapi-ecr-getrak-dev"
+
+
+
+## NETWORK
+## VPC devops e apps
+Caminha para executar o terraform plan:
+project-dennis-terraform-modulos/Terraform/NETWORK
+output:
+vpc_id_getrak = {
+  "apps" = "vpc-035c190544050868b"
+  "devops" = "vpc-076c014818d5cf036"
+}
